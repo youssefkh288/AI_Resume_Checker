@@ -2,14 +2,14 @@
 export const resumes: Resume[] = [
   {
     id: "1",
-    companyName: "Google",
-    jobTitle: "Frontend Developer",
+    companyName: "Netflix",
+    jobTitle: "Senior Frontend Engineer",
     imagePath: "/images/resume-1.png",
     resumePath: "/resumes/resume-1.pdf",
     feedback: {
-      overallScore: 85,
+      overallScore: 92,
       ATS: {
-        score: 90,
+        score: 95,
         tips: [],
       },
       toneAndStyle: {
@@ -17,122 +17,123 @@ export const resumes: Resume[] = [
         tips: [],
       },
       content: {
-        score: 90,
+        score: 88,
         tips: [],
       },
       structure: {
-        score: 90,
+        score: 94,
         tips: [],
       },
       skills: {
-        score: 90,
+        score: 93,
         tips: [],
       },
     },
   },
   {
     id: "2",
-    companyName: "Microsoft",
-    jobTitle: "Cloud Engineer",
+    companyName: "Spotify",
+    jobTitle: "Full Stack Developer",
     imagePath: "/images/resume-2.png",
     resumePath: "/resumes/resume-2.pdf",
     feedback: {
-      overallScore: 55,
+      overallScore: 78,
       ATS: {
-        score: 90,
+        score: 85,
         tips: [],
       },
       toneAndStyle: {
-        score: 90,
+        score: 80,
         tips: [],
       },
       content: {
-        score: 90,
+        score: 75,
         tips: [],
       },
       structure: {
-        score: 90,
+        score: 82,
         tips: [],
       },
       skills: {
-        score: 90,
+        score: 84,
         tips: [],
       },
     },
   },
   {
     id: "3",
-    companyName: "Apple",
-    jobTitle: "iOS Developer",
+    companyName: "Tesla",
+    jobTitle: "Software Engineer",
     imagePath: "/images/resume-3.png",
     resumePath: "/resumes/resume-3.pdf",
     feedback: {
-      overallScore: 75,
+      overallScore: 85,
       ATS: {
-        score: 90,
+        score: 88,
         tips: [],
       },
       toneAndStyle: {
-        score: 90,
+        score: 82,
         tips: [],
       },
       content: {
-        score: 90,
+        score: 87,
         tips: [],
       },
       structure: {
-        score: 90,
+        score: 85,
         tips: [],
       },
       skills: {
-        score: 90,
+        score: 89,
         tips: [],
       },
     },
-  }, {
+  }, 
+  {
     id: "4",
-    companyName: "Google",
-    jobTitle: "Frontend Developer",
+    companyName: "Airbnb",
+    jobTitle: "Product Manager",
     imagePath: "/images/resume-1.png",
     resumePath: "/resumes/resume-1.pdf",
     feedback: {
-      overallScore: 85,
+      overallScore: 67,
       ATS: {
-        score: 90,
+        score: 72,
         tips: [],
       },
       toneAndStyle: {
-        score: 90,
+        score: 65,
         tips: [],
       },
       content: {
-        score: 90,
+        score: 70,
         tips: [],
       },
       structure: {
-        score: 90,
+        score: 68,
         tips: [],
       },
       skills: {
-        score: 90,
+        score: 71,
         tips: [],
       },
     },
   },
   {
     id: "5",
-    companyName: "Microsoft",
-    jobTitle: "Cloud Engineer",
+    companyName: "Uber",
+    jobTitle: "Data Scientist",
     imagePath: "/images/resume-2.png",
     resumePath: "/resumes/resume-2.pdf",
     feedback: {
-      overallScore: 55,
+      overallScore: 89,
       ATS: {
-        score: 90,
+        score: 92,
         tips: [],
       },
       toneAndStyle: {
-        score: 90,
+        score: 87,
         tips: [],
       },
       content: {
@@ -140,41 +141,41 @@ export const resumes: Resume[] = [
         tips: [],
       },
       structure: {
-        score: 90,
+        score: 88,
         tips: [],
       },
       skills: {
-        score: 90,
+        score: 91,
         tips: [],
       },
     },
   },
   {
     id: "6",
-    companyName: "Apple",
-    jobTitle: "iOS Developer",
+    companyName: "Stripe",
+    jobTitle: "DevOps Engineer",
     imagePath: "/images/resume-3.png",
     resumePath: "/resumes/resume-3.pdf",
     feedback: {
-      overallScore: 75,
+      overallScore: 73,
       ATS: {
-        score: 90,
+        score: 78,
         tips: [],
       },
       toneAndStyle: {
-        score: 90,
+        score: 75,
         tips: [],
       },
       content: {
-        score: 90,
+        score: 72,
         tips: [],
       },
       structure: {
-        score: 90,
+        score: 76,
         tips: [],
       },
       skills: {
-        score: 90,
+        score: 79,
         tips: [],
       },
     },
@@ -234,15 +235,27 @@ export const prepareInstructions = ({
   jobDescription: string;
   AIResponseFormat: string;
 }) =>
-  `You are an expert in ATS (Applicant Tracking System) and resume analysis.
-  Please analyze and rate this resume and suggest how to improve it.
-  The rating can be low if the resume is bad.
-  Be thorough and detailed. Don't be afraid to point out any mistakes or areas for improvement.
-  If there is a lot to improve, don't hesitate to give low scores. This is to help the user to improve their resume.
-  If available, use the job description for the job user is applying to to give more detailed feedback.
-  If provided, take the job description into consideration.
-  The job title is: ${jobTitle}
-  The job description is: ${jobDescription}
-  Provide the feedback using the following format: ${AIResponseFormat}
-  Return the analysis as a JSON object, without any other text and without the backticks.
-  Do not include any other text or comments.`;
+  `You are an expert resume analyst and career coach with deep knowledge of modern hiring practices and ATS (Applicant Tracking System) optimization.
+
+Please provide a comprehensive analysis of this resume, focusing on its effectiveness for the target position. Be thorough and constructive in your feedback.
+
+Key Analysis Areas:
+- ATS Compatibility: How well the resume will perform in automated screening systems
+- Content Quality: Relevance, impact, and clarity of achievements and experiences
+- Structure & Format: Organization, readability, and professional presentation
+- Skills Alignment: Match between candidate skills and job requirements
+- Tone & Style: Professional voice and appropriate language for the industry
+
+Rating Guidelines:
+- 90-100: Exceptional resume that stands out significantly
+- 80-89: Strong resume with minor areas for improvement
+- 70-79: Good resume with several improvement opportunities
+- 60-69: Average resume requiring substantial enhancements
+- Below 60: Resume needs significant restructuring and improvement
+
+Target Position: ${jobTitle}
+Job Description: ${jobDescription}
+
+Provide detailed, actionable feedback using this format: ${AIResponseFormat}
+
+Return the analysis as a clean JSON object without any additional text or formatting.`;

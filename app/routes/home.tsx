@@ -5,18 +5,18 @@ import {resumes} from "../../constants";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "ResumeChecker" },
-    { name: "description", content: "Smart feedback for your dream job" },
+    { title: "Resumify" },
+    { name: "description", content: "AI-powered resume analysis for your career success" },
   ];
 }
 
 export default function Home() {
-return <main className="bg-[url('/images/bg-main.svg')]> bg-cover">
+return <main className="bg-[url('/images/bg-main-dark.svg')] bg-cover">
   <Navbar />
   <section className="main-section">
     <div className="page-heading py-16 ">
-      <h1>Track your applications & Resume Ratings</h1>
-      <h2>Review your submissions and check AI-Powered feedback</h2>
+      <h1>Transform Your Resume with AI Intelligence</h1>
+      <h2>Get instant feedback and optimize your applications for success</h2>
     </div>
  
 
