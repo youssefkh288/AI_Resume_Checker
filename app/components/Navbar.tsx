@@ -12,9 +12,9 @@ const Navbar = () => {
         <p className="text-2xl font-bold text-gradient">RESUMIFY</p>
       </Link>
       <div className="flex items-center gap-4">
-        <Link to="/upload" className="primary-button w-fit">
+        {/* <Link to="/upload" className="primary-button w-fit">
           Upload Resume
-        </Link>
+        </Link> */}
         {!isLoading && (
           auth.isAuthenticated ? (
             <div className="flex items-center gap-3">
