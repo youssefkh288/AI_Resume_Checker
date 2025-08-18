@@ -1,87 +1,110 @@
-# Welcome to React Router!
+# AI Resume Analyzer
 
-A modern, production-ready template for building full-stack React applications using React Router.
-
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+A modern web application that leverages AI to analyze resumes and provide feedback for job seekers. The application is built using React and utilizes various libraries for routing, state management, and file handling.
 
 ## Features
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+- **AI-Powered Resume Analysis**: Get instant feedback on your resume's effectiveness for specific job applications
+- **ATS Compatibility Scoring**: Understand how well your resume performs in Applicant Tracking Systems
+- **User-Friendly Interface**: Intuitive design for easy navigation and resume uploads
+- **Real-Time Feedback**: Receive immediate suggestions for improving your resume
 
-## Getting Started
+## Tech Stack
 
-### Installation
+### Frontend
 
-Install the dependencies:
+- **React** (v19.1.0) - JavaScript library for building user interfaces
+- **React Router** (v7.5.3) - Routing and navigation
+- **TypeScript** (v5.8.3) - Typed JavaScript
+- **Tailwind CSS** (v4.1.4) - Utility-first CSS framework
+- **Vite** (v6.3.3) - Build tool and dev server
+
+### Libraries
+
+- **pdfjs-dist** (v5.3.93) - PDF handling
+- **zustand** (v5.0.6) - State management
+- **react-dropzone** (v14.3.8) - File upload handling
+- **clsx & tailwind-merge** - CSS utility functions
+
+### Backend Integration
+
+- **Puter.com** - Cloud storage and AI services
+- **AI Feedback System** - Resume analysis using AI models
+
+## Project Structure
+
+```
+ai_resume_app/
+├── app/
+│   ├── components/          # Reusable UI components
+│   │   ├── ATS.tsx         # ATS score display
+│   │   ├── FileUploader.tsx # File upload component
+│   │   ├── ResumeCard.tsx   # Resume display card
+│   │   └── ...
+│   ├── routes/             # Route components
+│   │   ├── home.tsx        # Home page
+│   │   ├── upload.tsx      # Upload page
+│   │   ├── resume.tsx      # Resume analysis page
+│   │   └── auth.tsx        # Authentication page
+│   ├── lib/               # Utility functions
+│   │   ├── puter.ts       # Puter.com integration
+│   │   ├── pdf2img.ts     # PDF to image conversion
+│   │   └── utils.ts       # Helper functions
+│   └── root.tsx            # Root component
+├── constants/              # Configuration constants
+├── public/                # Static assets
+├── types/                 # TypeScript type definitions
+└── ...
+```
+
+## Installation
+
+1. Clone the repository:
+
+```bash
+git clone <https://github.com/youssefkh288/AI_Resume_Checker>
+cd ai_resume_app
+```
+
+2. Install dependencies:
 
 ```bash
 npm install
 ```
 
-### Development
-
-Start the development server with HMR:
+3. Start the development server:
 
 ```bash
 npm run dev
 ```
 
-Your application will be available at `http://localhost:5173`.
+The application will be available at `http://localhost:5173`.
 
 ## Building for Production
-
-Create a production build:
 
 ```bash
 npm run build
 ```
 
-## Deployment
+## Docker Deployment
 
-### Docker Deployment
-
-To build and run using Docker:
+Build and run with Docker:
 
 ```bash
-docker build -t my-app .
-
-# Run the container
-docker run -p 3000:3000 my-app
+docker build -t ai-resume-analyzer .
+docker run -p 3000:3000 ai-resume-analyzer
 ```
 
-The containerized application can be deployed to any platform that supports Docker, including:
+## Usage
 
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
+1. **Upload Resume**: Navigate to the upload page and submit your resume along with job details
+2. **Receive Feedback**: After analysis, view your resume's ATS score and improvement suggestions
+3. **Optimize**: Use the feedback to enhance your resume for better job applications
 
-### DIY Deployment
+## Key Components
 
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
+- **FileUploader**: Handles PDF resume uploads with drag-and-drop support
+- **ATS**: Displays ATS compatibility scores and suggestions
+- **ResumeCard**: Shows resume details and analysis results
+- **ScoreGauge**: Visual representation of resume scores
 
-Make sure to deploy the output of `npm run build`
-
-```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
-```
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
-
----
-
-Built with ❤️ using React Router.
